@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Page](README.md)
+* [0829 타입스크립트](README.md)
