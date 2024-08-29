@@ -191,7 +191,26 @@ const user: User = {
 }
 ```
 
+#### 함수의 명시적  this 타입
 
+```typescript
+interface User{
+  name: string;
+}
+function greet(this: User, msg: string){
+  return `Hello ${this.name},${msg}`;
+}
+const seokcess = {
+  name: 'seokcess'
+  greet;
+}
+seokcess.greet('Good morning');
+
+const neo = {
+  name: 'Neo';
+}
+greet.call(neo, 'Have a great day!');  
+```
 
 #### 옵셔널 체이닝 "?."
 
@@ -257,3 +276,6 @@ const theme = user.preferences?.theme ?? "default theme";
 // user.preferences == null / 왼쪽 값이 null이므로 오른쪽 값 반환
 console.log(theme); // "defalt theme"
 ```
+
+
+
